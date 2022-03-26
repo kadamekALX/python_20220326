@@ -11,6 +11,12 @@ Mniejsza równa 15: True
 Podzielna przez 2: False
 """
 
-liczba = int(input('Podaj liczbe: '))
+liczba = int(input('Podaj liczbe calkowita: '))
 
 print(f'Czy jest wieksza od 10: {liczba > 10}')
+print(f'Czy jest mniejsza lub rowna 15: {liczba <= 15}')
+print(f'Czy jest podzielna przez 2: {liczba % 2 == 0}')
+
+print(f'Czy jest wieksza od 10: {liczba > 10}',
+      f'Czy jest mniejsza lub rowna 15: {liczba <= 15}',
+      f'Czy jest podzielna przez 2: {liczba % 2 == 0}')
