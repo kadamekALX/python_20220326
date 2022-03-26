@@ -17,10 +17,12 @@ dystans - x
 """
 miasto_a = input('Podaj miasto A: ')
 miasto_b = input('Podaj miasto B: ')
-dystans = float(input(f'Podaj dystans {miasto_a}-{miasto_b}'))
+dystans = float(input(f'Podaj dystans {miasto_a}-{miasto_b}: '))
 cena = float(input('Podaj cene paliwa: '))
 spalanie = float(input('Spalanie na 100 km: '))
 
 koszt = dystans * spalanie / 100.0 * cena
 
-print(f'Koszt przejazdu {miasto_a}-{miasto_b} to {koszt:.2f} PLN')
+print('Koszt przejazdu ', miasto_a, '-', miasto_b, 'to', koszt, 'PLN')  # wiele argumentow w print
+print('Koszt przejazdu' + miasto_a + '-' + miasto_b + ' to ' + str(koszt) + ' PLN')  # konkatenacja stringow
+print(f'Koszt przejazdu {miasto_a}-{miasto_b} to {koszt:.2f} PLN')  # f-string
