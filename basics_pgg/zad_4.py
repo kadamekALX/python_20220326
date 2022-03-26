@@ -26,3 +26,6 @@ koszt = dystans * spalanie / 100.0 * cena
 print('Koszt przejazdu ', miasto_a, '-', miasto_b, 'to', koszt, 'PLN')  # wiele argumentow w print
 print('Koszt przejazdu' + miasto_a + '-' + miasto_b + ' to ' + str(koszt) + ' PLN')  # konkatenacja stringow
 print(f'Koszt przejazdu {miasto_a}-{miasto_b} to {koszt:.2f} PLN')  # f-string
+
+koszt_napis = f'Koszt przejazdu {miasto_a}-{miasto_b} to {koszt:.2f} PLN'
+print(koszt_napis)
