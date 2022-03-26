@@ -70,3 +70,10 @@ print(type(imie))
 imie_i_nazwisko = 'Piotr Grabski-Gradzinski'
 
 imie_i_nazwisko = 44
+
+print('-' * 60)
+
+# wczytywanie danych od uzytkownika
+imie = input('Podaj imie: ')  # input zawsze zwraca str!
+print(imie)
+print(type(imie))
