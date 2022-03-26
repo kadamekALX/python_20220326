@@ -10,3 +10,7 @@ Większa od 10: True
 Mniejsza równa 15: True
 Podzielna przez 2: False
 """
+
+liczba = int(input('Podaj liczbe: '))
+
+print(f'Czy jest wieksza od 10: {liczba > 10}')
