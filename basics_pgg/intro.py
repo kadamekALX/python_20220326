@@ -74,6 +74,30 @@ imie_i_nazwisko = 44
 print('-' * 60)
 
 # wczytywanie danych od uzytkownika
-imie = input('Podaj imie: ')  # input zawsze zwraca str!
-print(imie)
-print(type(imie))
+# imie = input('Podaj imie: ')  # input zawsze zwraca str!
+# print(imie)
+# print(type(imie))
+
+print('-' * 60)
+
+# operatory porownania - daje nam True albo False
+print(1 == 1)  # True, a rowne b
+print(1.0 == 1)  # True
+print("1" == 1)  # False
+print(int("1") == 1)  # True
+print(1 != 1)  # False, a rozne od b
+print(1 > 1)  # False, a wieksze od b
+print(1 >= 1)  # True, a wieksza badz rowne b
+print(1 < 1)  # False
+print(1 <= 1)  # True
+
+print('-' * 60)
+
+# operatory logiczne
+print(True and True)  # True, i, koniunkcja
+print(True or False)  # True, lub, alternatywa
+print(not True)  # False, przeczenie
+
+
+
+
