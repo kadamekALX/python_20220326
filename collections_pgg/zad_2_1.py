@@ -6,9 +6,7 @@ Skorzystaj z funkcji wbudowanej sum().
 
 liczby = []  # [] - tworzy pusta liste
 
-i = 1
-while i <= 10:
-    i += 1
+while len(liczby) < 10:
     liczba = int(input('Podaj liczbe: '))
     liczby.append(liczba)
 
