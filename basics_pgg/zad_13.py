@@ -45,3 +45,31 @@ ETAP 6 - przeniesienie skarbu po wykonaniu zbyt duzej liczby ruchow
 ETAP 7 - losowanie pozycji gracza i pozycji skarbu na samym poczatku gry
 1. Dodać randint przy tworzeniu zmiennych przed petla while
 """
+
+gracz_x = 4
+gracz_y = 4
+
+skarb_x = 6
+skarb_y = 6
+
+while True:
+    print(f'Twoja pozycja x={gracz_x} y={gracz_y}')
+
+    # ruch gracza
+    kierunek = input('Podaj kierunek (w, s, a, d): ')
+    if kierunek == 'w':
+        gracz_y += 1
+    elif kierunek == 's':
+        gracz_y -= 1
+    elif kierunek == 'a':
+        gracz_x -= 1
+    elif kierunek == 'd':
+        gracz_x += 1
+    else:
+        print('Nieprawidlowy kierunek')
+        continue
+
+    # sprawdzenie czy gracz wyszedl poza plansza
+    if gracz_x < 1 or gracz_x > 10 or gracz_y < 1 or gracz_y > 10:
+        print('Jestes poza plansza! GAME OVER!!!')
+        break
