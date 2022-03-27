@@ -7,5 +7,22 @@ Przykładowy komunikat programu:
 Podaj pierwszą liczbę: 10
 Podaj drugą liczbę: 5
 Podaj rodzaj operacji (+, -, *, /): +
-Wynik: 15
+Wynik: 10+5=15
 """
+
+liczba_1 = float(input('Podaj pierwszą liczbę: '))
+liczba_2 = float(input('Podaj drugą liczbę: '))
+operacja = input('Podaj rodzaj operacji (+, -, *, /): ')
+
+if operacja == '+':
+    wynik = liczba_1 + liczba_2
+elif operacja == '-':
+    wynik = liczba_1 - liczba_2
+elif operacja == '*':
+    wynik = liczba_1 * liczba_2
+elif operacja == '/':
+    wynik = liczba_1 / liczba_2
+else:
+    wynik = 'operacja nieprawidlowa'
+
+print(f'Wynik: {liczba_1}{operacja}{liczba_2}={wynik}')
