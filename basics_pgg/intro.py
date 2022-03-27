@@ -104,4 +104,18 @@ print(9 % 3)  # reszta z dzielenia: 0
 print(10 % 3)  # reszta z dzielenia: 1
 
 
+print('-' * 60)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
