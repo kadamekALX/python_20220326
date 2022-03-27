@@ -136,3 +136,15 @@ print('-' * 60)
 lista_a = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 for liczba in lista_a:  # element - zmienna tymczasowa, ja ustalam jak sie nazywa
     print(liczba)
+
+print('-' * 60)
+
+# range()
+
+for liczba in range(-2, 3):  # lewostronnie domkniety, prawostronnie otwarty
+    print(liczba)
+
+print('-' * 60)
+
+for liczba in range(-10, 11, 2):
+    print(liczba)
