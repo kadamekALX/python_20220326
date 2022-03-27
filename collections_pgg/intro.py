@@ -106,3 +106,33 @@ print(lista_a)
 
 lista_a[0:2] = [1000, 2000, 3000]
 print(lista_a)
+
+print('-' * 60)
+
+i = 1
+while i < 3:
+    print(i)
+    # break
+    i += 1
+else:
+    # to co jest w tym else wykona sie tylko wtedy, kiedy nie przerwe
+    # petli za pomoca break
+    print('Else po while')
+
+
+print('-' * 60)
+
+
+lista_a = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+i = 0
+while i < len(lista_a):
+    print(lista_a[i])
+    i += 1
+
+print('-' * 60)
+
+# to samo, ale przy uzciu petli for
+lista_a = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for liczba in lista_a:  # element - zmienna tymczasowa, ja ustalam jak sie nazywa
+    print(liczba)
