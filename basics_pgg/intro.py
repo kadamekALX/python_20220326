@@ -122,9 +122,14 @@ while liczba <= 100:
     liczba = liczba + 1
 
 
+print('-' * 60)
 
+while True:
+    liczba = int(input('Podaj liczbe: '))
+    print(liczba)
 
-
+    if liczba == 10:
+        break
 
 
 
