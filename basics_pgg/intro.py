@@ -98,6 +98,10 @@ print(True and True)  # True, i, koniunkcja
 print(True or False)  # True, lub, alternatywa
 print(not True)  # False, przeczenie
 
+print('-' * 60)
+
+print(9 % 3)  # reszta z dzielenia: 0
+print(10 % 3)  # reszta z dzielenia: 1
 
 
 
