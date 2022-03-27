@@ -46,12 +46,13 @@ ETAP 7 - losowanie pozycji gracza i pozycji skarbu na samym poczatku gry
 1. Dodać randint przy tworzeniu zmiennych przed petla while
 """
 import math
+import random
 
-gracz_x = 4
-gracz_y = 4
+gracz_x = random.randint(1, 10)
+gracz_y = random.randint(1, 10)
 
-skarb_x = 6
-skarb_y = 6
+skarb_x = random.randint(1, 10)
+skarb_y = random.randint(1, 10)
 
 while True:
     print(f'Twoja pozycja x={gracz_x} y={gracz_y}')
@@ -83,7 +84,8 @@ while True:
         print('BRAWO! WYGRALES! Znalazles skarb')
         break
 
-    if odleglosc_po_ruchu < odleglosc_przed_ruchem:
-       print('cieplo')
-    else:
-       print('zimno')
+    if random.randint(1, 5) != 5:
+        if odleglosc_po_ruchu < odleglosc_przed_ruchem:
+           print('cieplo')
+        else:
+           print('zimno')
