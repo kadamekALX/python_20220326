@@ -107,7 +107,19 @@ print(10 % 3)  # reszta z dzielenia: 1
 print('-' * 60)
 
 
+# petla while
+# wyswietlanie liczb od 1 do ...
+print(1)
+print(2)
+print(3)
+print(4)
 
+print('---')
+
+liczba = 1
+while liczba <= 100:
+    print(liczba)
+    liczba = liczba + 1
 
 
 
