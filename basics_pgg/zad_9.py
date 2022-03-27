@@ -6,3 +6,10 @@ Podaj rok urodzenia: 1980
 Jesteś pełnoletni!
 """
 
+rok_urodzenia = int(input('Podaj rok urodzenia: '))
+wiek = 2022 - rok_urodzenia
+
+if wiek >= 18:
+    print('Jesteś pełnoletni')
+else:
+    print('NIE jesteś pełnoletni')
