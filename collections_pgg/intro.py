@@ -250,3 +250,31 @@ print(1.5.__hash__())
 print(1.5.__hash__())
 print( (1,2,3).__hash__() )
 # print( [10, 20, 30].__hash__() )
+
+slownik['Ala'] = 500
+print(slownik)
+
+slownik['lista_temperatur'] = [10, 20, 30, 40, 50]
+print(slownik)
+
+slownik['Ala'] = 600
+print(slownik)
+
+print(slownik['Ala'])
+print(slownik.get('Ala'))  # wyciagam wartosc dla klucza 'Ala'
+
+# print(slownik['Krystyna'])  # bedzie wyjatek KeyError
+print(slownik.get('Krysyna'))  # jezeli nie bedzie takiego klucza, to dostane None
+# drugi argument do .get to tzw. wartosc domyslna
+print(slownik.get('Krystyna', -10))  # jesli nie ma klucza w slowniku, oddaj -10
+print(slownik.get('Ala', -10))  # jezeli jest klucz w slownik, oddaj jego wartosc
+
+
+print(slownik.keys())
+print(slownik.values())
+print(slownik.items())
+print(list(slownik.items())[1][1])
+
+for klucz, wartosc in slownik.items():
+    print(klucz, wartosc)
+
