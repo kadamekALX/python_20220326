@@ -148,3 +148,74 @@ print('-' * 60)
 
 for liczba in range(-10, 11, 2):
     print(liczba)
+
+print('-' * 60)
+
+"""
+Co zrobic w sytuacji kiedy chcemy miec w petli for
+dostep zarowno do wartosci jak i do indeksu, pod ktorym 
+ta wartosc sie znajduje?
+"""
+#              0   1   2   3   4   5  6
+temperatury = [10, 15, 17, -1, -5, 0, 2]
+for temperatura in enumerate(temperatury):
+    print(f"indeks: {temperatura[0]}, wartosc: {temperatura[1]}")
+
+print('-' * 30)
+
+imie, nazwisko = [123, 456]  # liczba zmiennych i liczba elementow po prawej stronie musi byc taka sama
+print(imie)
+print(nazwisko)
+
+print('-' * 30)
+
+#              0   1   2   3   4   5  6
+temperatury = [10, 15, 17, -1, -5, 0, 2]
+# wykorzystujemy rozpakowywanie (unpack)
+for indeks, temperatura in enumerate(temperatury):
+    print(f"indeks: {indeks}, wartosc: {temperatura}")
+
+print('-' * 60)
+
+napis = 'Ala ma kota. a kot ma KOMPILATOR'
+
+# operator dostepu
+print(napis[0])
+print(napis[0:5])
+print(napis[0:10:2])
+print(napis[::-1])  # przydaje sie do sprawdzenia czy zdanie jest palindromem
+
+print(napis.lower())  # ala ma kota. a kot ma kompilator
+print(napis.upper())  # ALA MA KOTA. A KOT MA KOMPILATOR
+print(napis.capitalize())  # Ala ma kota. a kot ma kompilator
+print(napis.title())  # Ala Ma Kota. A Kot Ma Kompilator
+
+print(napis.split())  # ['Ala', 'ma', 'kota.', 'a', 'kot', 'ma', 'KOMPILATOR']
+print(napis.split(' '))
+print(napis.split('.'))
+print(napis.split('a'))
+
+slowa = napis.split(' ')
+print(slowa)
+print(slowa[0:3])
+
+# scalanie stringow
+po_scaleniu = '<-->'.join(['a', 'b', 'c'])
+print(po_scaleniu)
+
+po_scaleniu = '<-->'.join("Ala ma kota")  # string zostanie potraktowany jako kolekcja
+print(po_scaleniu)
+
+# dodatkowe, przydatne funkcje do stringow
+# Wszystkie operacje na stringach zwracaja nowe stringi, nie modyfikuja istniejacych
+# stringi, podobnie jak tuple, sa niemutowalne
+print(napis)
+print(napis.count('a'))
+print(napis.index('a'))  # indeks pierwszego wystapienia znaku
+print(napis.find('a'))
+
+# print(napis.index('z'))  # jezeli index nie znajdzie danego znaku/napisu, wtedy rzuca wyjatkiem (ValueError)
+print(napis.find('z'))  # zwraca -1 jezeli nie znajdzie danego znaku/napisu
+
+print(napis.replace('a', ''))
+
