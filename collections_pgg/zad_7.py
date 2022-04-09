@@ -19,6 +19,7 @@ nie bedzie tym, ktory uzytkownik wprowadzil...
 napis = input('Podaj napis: ').lower()
 
 samogloski = ['a', 'e', 'i', 'o', 'u', 'y']  # moge dodac duze litery: 'A', 'E', ...
+samogloski = "aeiouy"
 liczba_samoglosek = 0
 
 for litera in napis.lower():  # napis.lower() da nowy napis na potrzeby obliczen
