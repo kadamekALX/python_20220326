@@ -219,3 +219,34 @@ print(napis.find('z'))  # zwraca -1 jezeli nie znajdzie danego znaku/napisu
 
 print(napis.replace('a', ''))
 
+
+"""
+Slownik, dict (ang. dictionary)
+struktura, ktora przechowuje klucz->wartosc
+Czym moze byc klucz?
+- kazda wartoscia, ktora jest hashowalna, posiada metode __hash__(), czyli np.:
+  string, int, float, tupla, boolean
+Czym moze byc wartosc?
+- czymkolwiek
+"""
+
+slownik = {
+    'Piotr': 123,
+    'Maciej': 156,
+    'Iwona': 203,
+    1: 555,
+    (1,2,3): 'Tomek',
+}
+
+print(slownik)
+print(slownik['Piotr'])  # dostep do wartosci poprzez slownik[klucz]
+print(slownik[1])
+print(slownik.keys())
+print(slownik.values())
+
+print("Ala ma kota".__hash__())
+print("Ala ma kota".__hash__())
+print(1.5.__hash__())
+print(1.5.__hash__())
+print( (1,2,3).__hash__() )
+# print( [10, 20, 30].__hash__() )
