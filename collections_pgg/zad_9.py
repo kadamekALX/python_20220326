@@ -16,3 +16,22 @@ Wypisz wszystkie dostępne produkty w sklepie.
 5. Liczymy należnosc
 """
 
+produkty = {
+    'ziemniaki': 1.2,
+    'pomidory': 4.5,
+    'marchew': 0.5,
+}
+
+print('Lista produktow:')
+for produkt, cena in produkty.items():
+    print(f'- {produkt} - {cena:.2f} zł / kg')
+
+produkt = input('Jaki produkt chcesz kupic? ')
+
+if produkt not in produkty:
+    print('Nie mamy takiego produktu na stanie. ')
+    exit()
+
+liczba_kg = float(input(f'Ile kg produktu {produkt} chcesz kupić: '))
+kwota = produkty[produkt] * liczba_kg
+print(f'Za {liczba_kg} kg produktu {produkt} zapłacisz {kwota:.2f} zł')
