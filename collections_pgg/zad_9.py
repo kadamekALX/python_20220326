@@ -26,12 +26,12 @@ print('Lista produktow:')
 for produkt, cena in produkty.items():
     print(f'- {produkt} - {cena:.2f} zł / kg')
 
-produkt = input('Jaki produkt chcesz kupic? ')
+towar = input('Jaki produkt chcesz kupic? ')
 
-if produkt not in produkty:
+if towar not in produkty:
     print('Nie mamy takiego produktu na stanie. ')
     exit()
 
-liczba_kg = float(input(f'Ile kg produktu {produkt} chcesz kupić: '))
-kwota = produkty[produkt] * liczba_kg
-print(f'Za {liczba_kg} kg produktu {produkt} zapłacisz {kwota:.2f} zł')
+liczba_kg = float(input(f'Ile kg produktu {towar} chcesz kupić: '))
+kwota = produkty[towar] * liczba_kg
+print(f'Za {liczba_kg} kg produktu {towar} zapłacisz {kwota:.2f} zł')
