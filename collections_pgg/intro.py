@@ -278,3 +278,27 @@ print(list(slownik.items())[1][1])
 for klucz, wartosc in slownik.items():
     print(klucz, wartosc)
 
+print('-' * 60)
+
+from collections import defaultdict
+
+domyslny_slownik = defaultdict(int)
+
+print(domyslny_slownik['Krysia'])
+print(domyslny_slownik['Tomasz'])
+print(int())  # callable, wywolywalne, cos co mozemy uruchomic jak funkcje
+print(float())
+
+temperatury = defaultdict(list)
+temperatury['Warszawa'].append(10)
+print(temperatury)
+
+# bez domyslnego slownika
+temperatury = {}
+if 'Warszawa' in temperatury:
+    temperatury['Warszawa'].append(10)
+else:
+    temperatury['Warszawa'] = []
+    temperatury['Warszawa'].append(10)
+
+print(temperatury)
