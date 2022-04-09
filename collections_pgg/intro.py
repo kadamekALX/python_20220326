@@ -302,3 +302,76 @@ else:
     temperatury['Warszawa'].append(10)
 
 print(temperatury)
+
+
+"""
+Zbiory (ang. set)
+"""
+
+zbior = {10, 10, 10, 10, 10, 10, 10, 10, 20, 30, 40, 50}
+print(zbior)
+
+zbior.add(10)
+zbior.add(10)
+zbior.add(10)
+zbior.add(10)
+
+print(zbior)
+
+nie_wiem_co = {}  # UWAGA! to bedzie pusty slownik a nie pusty zbior
+print(type(nie_wiem_co))
+
+pusty_zbior = set()  # mozna tez uzyc dla innych typow: list(), dict(), set(), tuple()
+print(type(pusty_zbior))
+
+zbior = {10, 20, 30, 40, 50}
+print(zbior)
+zbior.add(60)
+print(zbior)
+zbior.remove(60)
+print(zbior)
+
+zbior.update([1,2,3])  # dodawanie wszystkich elementow z kolekcji do zbioru
+# zbior.add((1,2,3))  # dodajemy cala tuple (a nie jej elementy) do zbioru
+print(zbior)
+
+# print(zbior[0])  # nie zadziala, bo zbior jest nieuporzadkowany
+
+print(len(zbior))
+
+print('-' * 30)
+
+for element in zbior:
+    print(element)
+
+# zbior.add([1, 2, 3])  # do zbioru mozemy dodawac tylko hashowable elementy - takie jakie moga byc kluczami w slowniku
+
+a = {1, 2, 3}
+b = {1, 2, 4, 5}
+
+# suma dwoch zbiorow
+print(a.union(b))
+print(a | b)
+
+# czesc wspolna dwoch zbiorow, przeciecie dwoch zbiorow
+print(a.intersection(b))
+print(a & b)
+
+# roznica dwoch zbiorow
+print(a.difference(b))  # od zbioru a odejmuje elementy ze zbioru b
+print(a - b)
+
+# roznica symetryczna - od sumy zbiorow odejmuje czesc wspolna
+print(a.symmetric_difference(b))
+print(a ^ b)
+
+print(a.isdisjoint(b))  # czy zbiory sa rozlaczne, czyli czy nie maja czesci wspolnej
+print(not bool(a & b))
+
+a = {1, 2}
+b = {1, 2, 3}
+
+print(a <= b)  # czy a jest podzbiorem b, = oznacza, ze zbiory moga byc takie same
+
+
+
