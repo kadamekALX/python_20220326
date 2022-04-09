@@ -17,7 +17,8 @@ dla liczb od 0 do 10 w postaci tabelki.
 10     0  10  20  30  40  50  60  70  80  90 100
 """
 
-print(1, end='  ')
-print(2, end='  ')
-print(3, end='  ')
+for x in range(0, 11):
+    for y in range(0, 11):
+        print(f'{x * y:5}', end=' ')
 
+    print()
