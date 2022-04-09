@@ -373,5 +373,21 @@ b = {1, 2, 3}
 
 print(a <= b)  # czy a jest podzbiorem b, = oznacza, ze zbiory moga byc takie same
 
+print('-' * 60)
 
+# przerabianie typow zwiazanych z kolekcjami
+zbior = {10, 20, 30, 40, 50}
+print(zbior)
+print(type(zbior))
+lista_ze_zbioru = list(zbior)
+print(lista_ze_zbioru)
+print(type(lista_ze_zbioru))
 
+lista_ze_zbioru.sort()
+print(lista_ze_zbioru)
+
+print(range(0, 100, 2))
+print(type(range(0, 100, 2)))
+
+lista = list(range(0, 100, 2))
+print(lista)

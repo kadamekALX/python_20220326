@@ -17,6 +17,10 @@ liczby_parzyste = set()
 for liczba in range(0, 101, 2):
     liczby_parzyste.add(liczba)
 
+# albo
+
+liczby_parzyste = set(range(0, 101, 2))
+
 liczby_uzytkownika = set()
 
 while True:
