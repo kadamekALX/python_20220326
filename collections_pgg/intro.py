@@ -391,3 +391,92 @@ print(type(range(0, 100, 2)))
 
 lista = list(range(0, 100, 2))
 print(lista)
+
+print('-' * 60)
+
+"""
+Comprehensions (wyrazenia...)
+- list comprehensions
+- dict comprehensions
+- set comprehensions
+"""
+
+wynik = []
+for liczba in range(0, 11):
+    wynik.append(liczba * 2)
+
+print(wynik)
+
+# dokladnie to samo tylko przy pomocy list comprehensions
+wynik = [liczba * 2 for liczba in range(0, 11)]
+print(wynik)
+
+print('-' * 30)
+
+wynik = []
+for liczba in range(0, 11):
+    if liczba % 2 == 0:
+        wynik.append(liczba * 2)
+    else:
+        wynik.append(liczba)
+
+print(wynik)
+
+wynik = [liczba * 2 if liczba % 2 == 0 else liczba for liczba in range(0, 11)]
+print(wynik)
+
+
+# set comprehensions
+literki = set()
+for litera in "Ala ma kota":
+    literki.add(litera)
+
+print(literki)
+
+literki = {litera for litera in "Ala ma kota"}
+print(literki)
+print(type(literki))
+
+# dict comprehensions
+napis = "Ala ma kota"
+wystapienia = dict()  # moge tez {}
+for litera in napis:
+    wystapienia[litera] = napis.count(litera)
+
+print(wystapienia)
+
+
+napis = "Ala ma kota"
+wystapienia = {litera: napis.count(litera) for litera in napis}
+print(wystapienia)
+
+
+# funkcja zip
+
+imiona = ['Piotr', 'Iwona', 'Tomek', 'Adam']
+wynagrodzenia = [10, 20, 30, 40, 50]
+
+wynik_zip = zip(imiona, wynagrodzenia)  # sam zip oddaje nam iterator (obiekt z ktorego mozna wyciagnac iterator metoda __iter__)
+wynik_zip = list(wynik_zip)
+print(wynik_zip)
+
+wynik_slownik = {}
+for imie, wynagrodzenie in zip(imiona, wynagrodzenia):
+    wynik_slownik[imie] = wynagrodzenie
+
+print(wynik_slownik)
+
+
+wynik_slownik = {imie: wynagrodzenie for imie, wynagrodzenie in zip(imiona, wynagrodzenia)}
+print(wynik_slownik)
+print(type(wynik_slownik))
+
+print('-' * 60)
+
+# generator expression - NIE tuple comprehension
+liczby = (liczba for liczba in range(0, 10))
+print(liczby)
+
+for x in liczby:
+    print(x)
+
