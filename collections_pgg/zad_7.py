@@ -11,12 +11,17 @@ Jak poradzić sobie ze zliczaniem dużych liter?
 2. Użyć metody .lower()
 """
 
-napis = input('Podaj napis: ')
+"""
+Funkcja input zwraca string i na tym stringu wykonujemy metode .lower()
+to rozwiazanie jest o tyle problematyczne, ze napis, ktory wyswietlimy
+nie bedzie tym, ktory uzytkownik wprowadzil...
+"""
+napis = input('Podaj napis: ').lower()
 
-samogloski = ['a', 'e', 'i', 'o', 'u', 'y']
+samogloski = ['a', 'e', 'i', 'o', 'u', 'y']  # moge dodac duze litery: 'A', 'E', ...
 liczba_samoglosek = 0
 
-for litera in napis:
+for litera in napis.lower():  # napis.lower() da nowy napis na potrzeby obliczen
     if litera in samogloski:
         liczba_samoglosek += 1
 
