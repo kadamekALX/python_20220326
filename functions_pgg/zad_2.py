@@ -41,3 +41,8 @@ print(czy_jest_pierwsza(3))
 print(czy_jest_pierwsza(9))
 print(czy_jest_pierwsza(10))
 print(czy_jest_pierwsza(17))
+
+
+def test_przykladowy():
+    # assert, po polsku asercja
+    assert czy_jest_pierwsza(-5) == False
