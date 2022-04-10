@@ -4,9 +4,11 @@ Stwórz kalkulator oparty o funkcje:
 2. Zapytaj o działanie: (+, -, *, /)
 3. Na podstawie działania wykonujemy obliczenia i je pokazujemy
 """
+from typing import Union
 
-
-def suma(liczba_1: float, liczba_2: float) -> float:
+# jezeli chcemy zasugerowac, ze dany argument moze byc podany w kilku typach, to mozemy
+# wykorzystac Union[typ1, typ2, typ3] - mowimy wtedy jakie rozne typy sa dozwolone
+def suma(liczba_1: Union[int, float], liczba_2: Union[int, float]) -> Union[int, float]:
     return liczba_1 + liczba_2
 
 
