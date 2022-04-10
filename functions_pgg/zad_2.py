@@ -17,6 +17,7 @@ import math
 round(2.5)  # zaokragla na zasadach ogolnych, .5 do gory
 math.floor(2.5)  # podloga - zaokragla w dol
 math.ceil(2.5)  # sufit - zaokragla do gory
+math.sqrt(4)
 
 def czy_jest_pierwsza(liczba: int) -> bool:
     """
