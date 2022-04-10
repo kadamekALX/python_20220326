@@ -53,7 +53,7 @@ def test_przykladowy():
     assert wynik == False  # then
 
 def test_liczb_pierwszych():
-    liczby_pierwsze = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    liczby_pierwsze = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}
     for liczba in liczby_pierwsze:
         assert czy_jest_pierwsza(liczba) == True
 
