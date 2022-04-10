@@ -54,6 +54,10 @@ def test_przykladowy():
 
 def test_liczb_pierwszych():
     liczby_pierwsze = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    for liczba in liczby_pierwsze:
+        assert czy_jest_pierwsza(liczba) == True
 
-
-
+def test_licz_nie_pierwszych():
+    liczby_nie_pierwsze = [-100, -10, -1, 0, 1, 4, 9, 15, 24, 36, 100]
+    for liczba in liczby_nie_pierwsze:
+        assert czy_jest_pierwsza(liczba) == False
