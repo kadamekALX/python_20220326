@@ -46,3 +46,14 @@ print(czy_jest_pierwsza(17))
 def test_przykladowy():
     # assert, po polsku asercja
     assert czy_jest_pierwsza(-5) == False
+
+    # podejscie GWT - Given When Then
+    liczba = -5 # given
+    wynik = czy_jest_pierwsza(liczba)  # when
+    assert wynik == False  # then
+
+def test_liczb_pierwszych():
+    liczby_pierwsze = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+
+
