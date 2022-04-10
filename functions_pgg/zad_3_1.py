@@ -19,10 +19,7 @@ pusty napis
 def wiecej_niz(napis: str, ile_znakow: int = 1) -> set:
     wystapienia = {}
     for litera in napis.lower():
-        if litera not in wystapienia:
-            wystapienia[litera] = 1
-        else:
-            wystapienia[litera] += 1
+        wystapienia[litera] = napis.count(litera)
 
     wynik = set()
     for litera, liczba_wystapien in wystapienia.items():
@@ -36,13 +33,5 @@ def test_pusty_napis():
     assert wiecej_niz('', 1) == set()
 
 def test_pierwszy_napis():
-    # przekazywanie argumentow na sposob pozycyjny
     assert wiecej_niz('ala ma kota a kot ma ale', 3) == {'a', ' '}
-    # przekazywanie argumentow na sposob pozycyjny
     assert wiecej_niz('ala') == {'a'}
-    # przekazywanie argumentow na sposob nazwany
-    assert wiecej_niz(napis='ala', ile_znakow=3) == set()
-    assert wiecej_niz(ile_znakow=3, napis='ala') == set()
-
-    # przekazywanie argumentow na oba sposoby
-    assert wiecej_niz('ala', ile_znakow=3) == set()
