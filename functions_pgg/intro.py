@@ -78,3 +78,36 @@ print(wynik_mnozenia)
 wynik = print('asd')
 print(wynik)
 
+print('-' * 60)
+
+# dokumentacja - w jaki sposob mozna dokumentowac swoje funkcje
+# type-hinting - podpowiadanie typu
+# docstring - tekstowy opis co nasza funkcja robi
+def dodawanie(liczba1: int, liczba2: int) -> int:
+    """
+    Funkcja dodaje do siebie dwie liczby i zwraca ich sumę.
+
+    :param liczba1: Pierwsza liczba do sumy
+    :param liczba2: Druga liczba do sumy
+    :return: Suma dwoch liczb - liczba1 i liczba2
+    """
+    return liczba1 + liczba2
+
+
+wynik = dodawanie(5, 10)
+print(wynik)
+
+wynik = dodawanie([1, 2, 3], [4, 5, 6])  # PyCharm podpowiada, ze funkcja dodawanie oczekuje int a my przekazujemy listy i ze to moze byc problemem
+print(wynik)
+
+
+
+
+
+
+
+
+
+
+
+
