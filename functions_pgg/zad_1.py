@@ -5,18 +5,41 @@ Stwórz kalkulator oparty o funkcje:
 3. Na podstawie działania wykonujemy obliczenia i je pokazujemy
 """
 
+
+def suma(liczba_1: float, liczba_2: float) -> float:
+    return liczba_1 + liczba_2
+
+
+def roznica(liczba_1: float, liczba_2: float) -> float:
+    return liczba_1 - liczba_2
+
+
+def iloczyn(liczba_1: float, liczba_2: float) -> float:
+    """
+
+    :param liczba_1:
+    :param liczba_2:
+    :return:
+    """
+    return liczba_1 * liczba_2
+
+
+def iloraz(liczba_1: float, liczba_2: float) -> float:
+    return liczba_1 / liczba_2
+
+
 liczba_1 = float(input('Podaj pierwszą liczbę: '))
 liczba_2 = float(input('Podaj drugą liczbę: '))
 operacja = input('Podaj rodzaj operacji (+, -, *, /): ')
 
 if operacja == '+':
-    wynik = liczba_1 + liczba_2
+    wynik = suma(liczba_1, liczba_2)
 elif operacja == '-':
-    wynik = liczba_1 - liczba_2
+    wynik = roznica(liczba_1, liczba_2)
 elif operacja == '*':
-    wynik = liczba_1 * liczba_2
+    wynik = iloczyn(liczba_1, liczba_2)
 elif operacja == '/':
-    wynik = liczba_1 / liczba_2
+    wynik = iloraz(liczba_1, liczba_2)
 else:
     wynik = 'operacja nieprawidlowa'
 
