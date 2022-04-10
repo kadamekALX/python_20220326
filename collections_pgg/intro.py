@@ -403,13 +403,13 @@ Comprehensions (wyrazenia...)
 
 wynik = []
 for liczba in range(0, 11):
-    wynik.append(liczba * 2)
+    wynik.append(liczba)
 
-print(wynik)
+print(wynik)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 # dokladnie to samo tylko przy pomocy list comprehensions
-wynik = [liczba * 2 for liczba in range(0, 11)]
-print(wynik)
+wynik = [liczba  for liczba in range(0, 11)]  # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+print(wynik)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 print('-' * 30)
 
