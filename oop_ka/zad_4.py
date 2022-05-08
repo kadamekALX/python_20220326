@@ -20,6 +20,17 @@ class Produkt:
         self.nazwa = nazwa
         self.cena = cena
 
+class WpisKoszyka:
+    def __init__(self, p, ilosc):
+        self.produkt = p
+        self.ilosc = ilosc
+
+    def wartosc(self):
+        return self.produkt.cena * self.ilosc
+
+    def info(self):
+        return f"{self.produkt.nazwa}, {self.produkt.cena} x {self.ilosc}"
+
 class Koszyk:
     def __init__(self):
         self.zawartosc = []
@@ -28,18 +39,18 @@ class Koszyk:
         if not isinstance(p, Produkt):
             print("Do koszyka można wkładać tylko Produkty!")
             return
-        self.zawartosc.append({"produkt": p, "ilosc": ile})
+        self.zawartosc.append(WpisKoszyka(p, ile))
 
     def laczna_wartosc(self):
         suma = 0
-        for prod in self.zawartosc:
-            suma += prod["produkt"].cena * prod["ilosc"]
+        for wpis in self.zawartosc:
+            suma += wpis.wartosc()
         return suma
 
     def rachunek(self):
         print("Produkty w koszyku:")
-        for p in self.zawartosc:
-            print(f" - {p['produkt'].nazwa}, {p['produkt'].cena} x {p['ilosc']}")
+        for wpis in self.zawartosc:
+            print(f" - {wpis.info()}")
         print(f"Suma: {self.laczna_wartosc()} PLN")
 
 # woda = Produkt(1, "Woda", 10)
