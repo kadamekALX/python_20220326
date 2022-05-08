@@ -15,10 +15,47 @@
 # W sumie: 50.00'
 
 class Produkt:
-    pass
+    def __init__(self, id, nazwa, cena):
+        self.id = id
+        self.nazwa = nazwa
+        self.cena = cena
+
+class NieProdukt:
+    def __init__(self, nazwa, cena):
+        self.nazwa = nazwa
+        self.cena = cena
 
 class Koszyk:
-    pass
+    def __init__(self):
+        self.zawartosc = []
+
+    def dodaj_produkt(self, p: Produkt, ile=1):
+        if not isinstance(p, Produkt):
+            print("Do koszyka można wkładać tylko Produkty!")
+            return
+        for _ in range(ile):
+            self.zawartosc.append(p)
+
+    def laczna_wartosc(self):
+        suma = 0
+        for prod in self.zawartosc:
+            suma += prod.cena
+        return suma
+
+    def rachunek(self):
+        print("Produkty w koszyku:")
+        for p in self.zawartosc:
+            print(f" - {p.nazwa}, {p.cena}")
+        print(f"Suma: {self.laczna_wartosc()} PLN")
+
+# woda = Produkt(1, "Woda", 10)
+# banan = Produkt(2, "Banan", 2)
+# niewoda = NieProdukt("Woda", 20)
+# k = Koszyk()
+# k.dodaj_produkt(woda)
+# k.dodaj_produkt(banan)
+# # k.dodaj_produkt(niewoda)
+# print(k.laczna_wartosc())
 
 
 def test_0():
@@ -36,3 +73,12 @@ def test_1():
     koszyk.dodaj_produkt(woda, 3)
     koszyk.dodaj_produkt(bulka, 2)
     assert koszyk.laczna_wartosc() == 32
+
+
+# if __name__ == "__main__":
+woda = Produkt(1, "Woda", 10.50)
+bulka = Produkt(2, "Bułka", 1.75)
+koszyk = Koszyk()
+koszyk.dodaj_produkt(woda, 24)
+koszyk.dodaj_produkt(bulka)
+koszyk.rachunek()
