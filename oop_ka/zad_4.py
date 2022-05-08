@@ -20,22 +20,22 @@ class Produkt:
         self.nazwa = nazwa
         self.cena = cena
 
-class WpisKoszyka:
-    def __init__(self, p, ilosc):
-        self.produkt = p
-        self.ilosc = ilosc
-
-    def wartosc(self):
-        return self.produkt.cena * self.ilosc
-
-    def info(self):
-        return f"{self.produkt.nazwa}, {self.produkt.cena} x {self.ilosc}"
-
-    def czy_zawiera(self, prod: Produkt):
-        return self.produkt == prod
-
 
 class Koszyk:
+    class WpisKoszyka:
+        def __init__(self, p, ilosc):
+            self.produkt = p
+            self.ilosc = ilosc
+
+        def wartosc(self):
+            return self.produkt.cena * self.ilosc
+
+        def info(self):
+            return f"{self.produkt.nazwa}, {self.produkt.cena} x {self.ilosc}"
+
+        def czy_zawiera(self, prod: Produkt):
+            return self.produkt == prod
+
     def __init__(self):
         self.zawartosc = {}
 
@@ -46,7 +46,7 @@ class Koszyk:
         if p.id in self.zawartosc:
             self.zawartosc[p.id].ilosc += ile
         else:
-            self.zawartosc[p.id] = WpisKoszyka(p, ile)
+            self.zawartosc[p.id] = Koszyk.WpisKoszyka(p, ile)
 
     def laczna_wartosc(self):
         suma = 0
@@ -91,7 +91,7 @@ def test_1():
 woda = Produkt(1, "Woda", 10.50)
 bulka = Produkt(2, "Bułka", 1.75)
 koszyk = Koszyk()
-koszyk.dodaj_produkt(woda, 12)
+koszyk.dodaj_produkt(woda, 17)
 koszyk.dodaj_produkt(woda, 13)
 koszyk.dodaj_produkt(bulka)
 koszyk.rachunek()
