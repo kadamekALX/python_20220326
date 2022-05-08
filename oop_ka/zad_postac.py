@@ -5,7 +5,10 @@ class Postac:
         self.max_zdrowie = zdrowie
 
     def wypisz(self):
-        print(f"{self.imie}, {self.zdrowie}/{self.max_zdrowie} HP")
+        if self.czy_zyje():
+            print(f"{self.imie}, {self.zdrowie}/{self.max_zdrowie} HP")
+        else:
+            print(f"{self.imie}, nie żyje")
 
     # zmniejsza zdrowie o dmg; zdrowie nie powinno spaść poniżej 0
     def otrzymaj_obrazenia(self, dmg):
