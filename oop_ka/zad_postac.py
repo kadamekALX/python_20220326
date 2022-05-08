@@ -30,6 +30,9 @@ class Postac:
             self.zdrowie += hp
             if self.zdrowie > self.max_zdrowie:
                 self.zdrowie = self.max_zdrowie
+        else:
+            print("Nie można wyleczyć trupa!")
+
 
     # zwraca iformację, czy postać żyje
     def czy_zyje(self):
