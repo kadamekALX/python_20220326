@@ -31,6 +31,10 @@ class WpisKoszyka:
     def info(self):
         return f"{self.produkt.nazwa}, {self.produkt.cena} x {self.ilosc}"
 
+    def czy_zawiera(self, prod: Produkt):
+        return self.produkt == prod
+
+
 class Koszyk:
     def __init__(self):
         self.zawartosc = []
@@ -39,6 +43,10 @@ class Koszyk:
         if not isinstance(p, Produkt):
             print("Do koszyka można wkładać tylko Produkty!")
             return
+        for wpis in self.zawartosc:
+            if wpis.czy_zawiera(p):
+                wpis.ilosc += ile
+                return
         self.zawartosc.append(WpisKoszyka(p, ile))
 
     def laczna_wartosc(self):
@@ -84,6 +92,7 @@ def test_1():
 woda = Produkt(1, "Woda", 10.50)
 bulka = Produkt(2, "Bułka", 1.75)
 koszyk = Koszyk()
-koszyk.dodaj_produkt(woda, 24)
+koszyk.dodaj_produkt(woda, 12)
+koszyk.dodaj_produkt(woda, 13)
 koszyk.dodaj_produkt(bulka)
 koszyk.rachunek()
