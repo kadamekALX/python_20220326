@@ -37,27 +37,26 @@ class WpisKoszyka:
 
 class Koszyk:
     def __init__(self):
-        self.zawartosc = []
+        self.zawartosc = {}
 
     def dodaj_produkt(self, p: Produkt, ile=1):
         if not isinstance(p, Produkt):
             print("Do koszyka można wkładać tylko Produkty!")
             return
-        for wpis in self.zawartosc:
-            if wpis.czy_zawiera(p):
-                wpis.ilosc += ile
-                return
-        self.zawartosc.append(WpisKoszyka(p, ile))
+        if p.id in self.zawartosc:
+            self.zawartosc[p.id].ilosc += ile
+        else:
+            self.zawartosc[p.id] = WpisKoszyka(p, ile)
 
     def laczna_wartosc(self):
         suma = 0
-        for wpis in self.zawartosc:
+        for id, wpis in self.zawartosc.items():
             suma += wpis.wartosc()
         return suma
 
     def rachunek(self):
         print("Produkty w koszyku:")
-        for wpis in self.zawartosc:
+        for id, wpis in self.zawartosc.items():
             print(f" - {wpis.info()}")
         print(f"Suma: {self.laczna_wartosc()} PLN")
 
