@@ -20,11 +20,6 @@ class Produkt:
         self.nazwa = nazwa
         self.cena = cena
 
-class NieProdukt:
-    def __init__(self, nazwa, cena):
-        self.nazwa = nazwa
-        self.cena = cena
-
 class Koszyk:
     def __init__(self):
         self.zawartosc = []
