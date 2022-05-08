@@ -31,6 +31,7 @@ class Employee:
         self.przepracowane_godziny = 0
         return wynagrodzenie
 
+
 def test_0():
     e = Employee("Jan", "Kowalski", 100)
     assert e.pay_salary() == 0
