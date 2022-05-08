@@ -1,16 +1,24 @@
 class Ulamek:
     def __init__(self, licznik, mianownik):
-        pass
+        self.licznik = licznik
+        self.mianownik = mianownik
 
     def __str__(self):
-        pass
+        return f"{self.licznik}/{self.mianownik}"
 
     def domnoz(self, other): # a.domnoz(b) - a *= b
-        pass
+        self.licznik *= other.licznik
+        self.mianownik *= other.mianownik
+
+    def dodaj(self, other): # a.dodaj(b) - a += b
+        self.licznik = self.licznik * other.mianownik + self.mianownik * other.licznik
+        self.mianownik *= other.mianownik
 
 
-def test_domnoz():
-    a = Ulamek(1, 2)
-    b = Ulamek(2, 3)
-    a.domnoz(b)
-    assert str(a) == "2/6"
+a = Ulamek(1, 2)
+b = Ulamek(2, 3)
+print(a)
+a.domnoz(b)
+print(a)
+a.dodaj(b)
+print(a)
