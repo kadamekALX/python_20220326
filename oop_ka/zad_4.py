@@ -28,19 +28,18 @@ class Koszyk:
         if not isinstance(p, Produkt):
             print("Do koszyka można wkładać tylko Produkty!")
             return
-        for _ in range(ile):
-            self.zawartosc.append(p)
+        self.zawartosc.append({"produkt": p, "ilosc": ile})
 
     def laczna_wartosc(self):
         suma = 0
         for prod in self.zawartosc:
-            suma += prod.cena
+            suma += prod["produkt"].cena * prod["ilosc"]
         return suma
 
     def rachunek(self):
         print("Produkty w koszyku:")
         for p in self.zawartosc:
-            print(f" - {p.nazwa}, {p.cena}")
+            print(f" - {p['produkt'].nazwa}, {p['produkt'].cena} x {p['ilosc']}")
         print(f"Suma: {self.laczna_wartosc()} PLN")
 
 # woda = Produkt(1, "Woda", 10)
