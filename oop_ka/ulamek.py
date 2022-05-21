@@ -1,5 +1,7 @@
 class Ulamek:
     def __init__(self, licznik, mianownik):
+        if mianownik == 0:
+            raise ZeroDivisionError("Mianownik nie może być 0")
         self.licznik = licznik
         self.mianownik = mianownik
 
@@ -56,4 +58,6 @@ e = a * z # to wywoła a.__mul__(z)
 
 print(b)
 # g = -b # TODO zaimplementować __neg__()
-print(g)
+# print(g)
+
+x = Ulamek(1, 0)
