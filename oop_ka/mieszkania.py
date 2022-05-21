@@ -16,33 +16,33 @@ class Osoba:
 
     def wymelduj(self):
         if self.adres is not None:
-            self.adres.wymelduj(self)
+            self.adres._wymelduj(self)
         self.adres = None
 
     def zamelduj(self, dom):
         self.wymelduj()
         if dom is not None:
-            dom.zamelduj(self)
+            dom._zamelduj(self)
         self.adres = dom
 
 class Dom:
     def __init__(self, nazwa):
         self.nazwa = nazwa
-        self.lokatorzy = []
+        self.__lokatorzy = [] # pole "prywatne"
 
     def __str__(self):
         return self.nazwa
 
     def wypisz_mieszkancow(self):
         print(f"{self.nazwa}:")
-        for m in self.lokatorzy:
+        for m in self.__lokatorzy:
             print(f"\t{m.imie}")
 
-    def zamelduj(self, osoba):
-        self.lokatorzy.append(osoba)
+    def _zamelduj(self, osoba): # '_' na początku nazwy oznacza, że nie powinno się z tego korzystać poz klasą (chyba, że wiemy co robimy)
+        self.__lokatorzy.append(osoba)
 
-    def wymelduj(self, osoba):
-        self.lokatorzy.remove(osoba)
+    def _wymelduj(self, osoba):
+        self.__lokatorzy.remove(osoba)
 
 
 jan = Osoba("Jan")
@@ -60,3 +60,5 @@ d2.wypisz_mieszkancow()
 d.wypisz_mieszkancow()
 jan.zamelduj(None)
 jan.wypisz()
+print(dir(d))
+print(d._Dom__lokatorzy) # da się dobrać do pola prywatnego jak się bardzo chce ;)
