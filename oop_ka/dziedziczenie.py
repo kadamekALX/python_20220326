@@ -15,8 +15,8 @@ class Pracownik(Osoba): # klasa Pracownik dziedziczy po klasie Osoba
     def pracuj(self):
         print("Pracu-pracu")
 
-    def przedstaw_sie(self):
-        print(f"Nazywam sie {self.imie} {self.nazwisko}, pracuję jako {self.stanowisko}")
+    # def przedstaw_sie(self):
+    #     print(f"Nazywam sie {self.imie} {self.nazwisko}, pracuję jako {self.stanowisko}")
 
 
 p = Pracownik("Jan", "Kowalski", "spawacz")
