@@ -31,6 +31,8 @@ if op == 'd':
     lista.append(pracownik)
     with open("pracownicy.json", 'w') as plik:
         json.dump(lista, plik, indent=4)
+        # napis = json.dumps(lista)
+        # plik.write(napis)
 elif op == 'w':
     for nr, p in enumerate(lista, 1):
         print(f"[{nr}] - {p['imie']} {p['nazwisko']}")

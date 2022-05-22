@@ -7,7 +7,7 @@ def fun():
     tekst.configure(text=tresc)
 
 root = tk.Tk()
-
+root.title("Aplikacja okienkowa")
 przycisk = tk.Button(master=root, text="Click me!", command=fun)
 przycisk.grid(row=0, column=0)
 
