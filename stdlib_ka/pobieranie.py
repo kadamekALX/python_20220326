@@ -1,4 +1,4 @@
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 import json
 
 # with urlopen("https://www.kindpng.com/picc/m/5-51409_meme-sad-frog-clipart-sad-frog-hd-png.png") as plik:
@@ -16,3 +16,7 @@ print(lista)
 with urlopen("http://api.nbp.pl/api/cenyzlota?format=json") as plik:
     lista = json.load(plik)
 print("Aktualna cena złota:", lista[0]['cena'])
+
+zapytanie = Request("http://api.nbp.pl/api/cenyzlota?format=json", headers={"User-Agent": "haxx0r"})
+with urlopen(zapytanie) as plik:
+    print(plik.read())
