@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from firstApp.views import widok, hello # importujemy widoki z firstApp
+from firstApp.views import *  # importujemy wszystkie widoki z firstApp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('widok/', widok),
     path('hello/<imie>/', hello),
     path('hello/<imie>/<nazwisko>/', hello),
+    path('dzialanie/<op>/<a>/<b>/', dzialanie),
 ]
