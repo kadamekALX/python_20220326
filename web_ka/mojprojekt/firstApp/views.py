@@ -29,12 +29,4 @@ def dzialanie(request, op, a, b):
 def produkty(request):
     # prods = Produkt.objects.all()  # zwraca wszystkie produkty z bazy
     prods = Produkt.objects.filter(dostepny=True)
-
-    lista = []
-    for p in prods:
-        lista.append(f"<li>{p.nazwa} - {p.dostepny}</li>")
-    napis = "\n".join(lista)
-
-    return HttpResponse(f"<ul>{napis}</ul>")
-    # return HttpResponse(f"{', '.join(p.nazwa for p in produkty)}")
-    # return HttpResponse(f"{produkty}")
+    return render(request, "lista_produktow.html", context={"produkty": prods})
