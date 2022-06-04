@@ -25,4 +25,5 @@ urlpatterns = [
     path('hello/<imie>/<nazwisko>/', hello),
     path('dzialanie/<op>/<a>/<b>/', dzialanie),
     path('produkty/', produkty),
+    path('produkt/<int:id>/', szczegoly_produktu)
 ]

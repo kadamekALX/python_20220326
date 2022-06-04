@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ p.nazwa }}</title>
+</head>
+<body>
+    <h1>{{ p.nazwa }}</h1>
+    <h2>Opis</h2>
+    <p>{{ p.opis }}</p>
+    <h2>Cena: {{ p.cena }} PLN</h2>
+    {% if p.dostepny %} <h3>Produkt dostępny</h3>
+    {% else %} <h3>Produkt niedostępny</h3>
+    {% endif %}
+</body>
+</html>
