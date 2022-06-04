@@ -24,6 +24,6 @@ urlpatterns = [
     path('hello/<imie>/', hello),
     path('hello/<imie>/<nazwisko>/', hello),
     path('dzialanie/<op>/<a>/<b>/', dzialanie),
-    path('produkty/', produkty),
-    path('produkt/<int:id>/', szczegoly_produktu)
+    path('produkty/', produkty, name="lista_produktow"),
+    path('produkt/<int:id>/', szczegoly_produktu, name="szczegoly_produktu")
 ]

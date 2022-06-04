@@ -8,7 +8,7 @@
     <h1>Lista produktów</h1>
     <ul>
         {% for p in produkty %}
-        <li>{{ p.nazwa }} - {{ p.cena }} PLN</li>
+        <li><a href="{% url 'szczegoly_produktu' p.id %}">{{ p.nazwa }}</a> - {{ p.cena }} PLN</li>
         {% endfor %}
     </ul>
 </body>
