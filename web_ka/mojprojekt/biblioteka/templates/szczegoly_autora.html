@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{autor.imie}} {{autor.nazwisko}}</title>
+</head>
+<body>
+  <h1>{{autor.imie}} {{autor.nazwisko}}</h1>
+  <h2>Dzieła:</h2>
+  <ul>
+    {% for k in ksiazki %}
+    <li>{{ k.tytul }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

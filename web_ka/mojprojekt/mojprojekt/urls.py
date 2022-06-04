@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from biblioteka.views import *
 from firstApp.views import *  # importujemy wszystkie widoki z firstApp
 
 urlpatterns = [
@@ -25,5 +26,7 @@ urlpatterns = [
     path('hello/<imie>/<nazwisko>/', hello),
     path('dzialanie/<op>/<a>/<b>/', dzialanie),
     path('produkty/', produkty, name="lista_produktow"),
-    path('produkt/<int:id>/', szczegoly_produktu, name="szczegoly_produktu")
+    path('produkt/<int:id>/', szczegoly_produktu, name="szczegoly_produktu"),
+    path('autorzy/', lista_autorow, name="lista_autorow"),
+    path('autor/<int:id>/', szczegoly_autora, name="autor_details"),
 ]
